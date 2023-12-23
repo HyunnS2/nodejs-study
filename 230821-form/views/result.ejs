@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span {
+        color: blue;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <div><span><%= userInfo.id %></span>님 환영합니다!</div>
+    <div>비밀번호는 <span><%= userInfo.pw %></span>이군요</div>
+    <br />
+    <br />
+    <a href="/">홈으로 이동</a>
+
+    <script>
+      //   ' < % = 데이터 % > : 하나의 데이터를 받아올 때'
+    </script>
+
+    <!-- readonly : 선택 안됨 , 백엔드로 데이터 전송 가능
+    disabled : 선택 안됨 , 백엔드 데이터 전송도 안됨 -->
+  </body>
+</html>

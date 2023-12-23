@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      span {
+        color: blue;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title%></h1>
+    <div><span><%= userInfo.name %></span>님 환영합니다!</div>
+    <div>성별 : <span> <%= userInfo.gender %></span></div>
+    <br />
+    <div>
+      생년월일:
+      <span>
+        <%= userInfo.year %>년 <%= userInfo.month %>월 <%= userInfo.day %>일
+      </span>
+    </div>
+    <br />
+    <div>관심사: <span> <%= userInfo.hobby %></span></div>
+    <br />
+
+    <div>
+      <label for="favColor">좋아하는 색상:</label>
+      <span>
+        <input
+          type="color"
+          id="favColor"
+          name="favColor"
+          value="<%= favColor %>"
+        />
+      </span>
+      <br />
+
+      <label for="favNumber">좋아하는 숫자:</label>
+      <span>
+        <input
+          type="number"
+          id="favNumber"
+          name="favNumber"
+          value="<%= favNumber %>"
+        />
+      </span>
+
+      <br />
+    </div>
+    <a href="/">홈으로 이동</a>
+  </body>
+</html>

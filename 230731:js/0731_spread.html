@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 3. ... 연산자 (=spread 연산자)
+
+      const a = [1, 2, 3];
+      const b = [4, 5];
+      // 기존의 합산 방식
+      const concat = a.concat(b);
+      console.log(concat);
+
+      // spread 연산자를 이용한 합산 방식
+      const spread = [...a, ...b];
+      console.log(spread);
+
+      // 배열이 아닌 객체에 적용해보면? -> 객체 형태로 넣어주면 됨.
+      // 가능하긴 하나 많이 쓰진 않음
+      const person = {
+        name: "martin",
+        age: 29,
+      };
+      console.log({ ...person });
+
+      // 문자열에 적용해보면?
+      const c = "Hello";
+      console.log([...c]);
+
+      console.log("------<rest>-----");
+
+      // 4. rest 파라미터 ( = 나머지 연산자 )
+      // spread 연산자와 똑같아 보이지만 , 쓰는 위치가 다름 !
+      // spread = 호출 할 때 , rest = 호출 받을 때
+      // 추가할 때 굳이 변수를 선언하지 않고 rest로 추가해줌
+      // 나머지 이기 때문에 항상 뒤에 위치해야 함 ex) ...rest,a (X) a,...rest (O)
+
+      function get(a, ...rest) {
+        console.log(a, rest);
+      }
+      get(10, 20, 30, 40, 50);
+
+      console.log("------<class>-----");
+
+      // class
+
+      class Cat {
+        // 생성자
+        constructor(name, age) {
+          // 속성
+          this.name = name;
+          this.age = age;
+        }
+
+        // 메소드
+        mew() {
+          console.log("야옹");
+        }
+
+        eat() {
+          console.log("먹이를 먹습니다");
+        }
+      }
+
+      // Cat이라는 class의 instance 생성하기
+      const cat1 = new Cat("나비", 1);
+      console.log(cat1);
+      // 접근하기
+      cat1.mew();
+      cat1.eat();
+    </script>
+  </body>
+</html>

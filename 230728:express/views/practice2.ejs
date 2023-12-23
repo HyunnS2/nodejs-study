@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"
+      integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Document</title>
+
+    <style>
+      div {
+        width: 500px;
+        height: 500px;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+      button {
+        /*width: 60px;
+        height: 40px;*/
+
+        background-color: black;
+        color: white;
+      }
+    </style>
+
+    <script>
+      function apple() {
+        $("img").attr("src", "./appleimg.jpeg");
+      }
+
+      function banana() {
+        $("img").attr("src", "./bananaimg.jpeg");
+      }
+
+      function grape() {
+        $("img").attr("src", "./grapeimg.jpeg");
+      }
+      function peach() {
+        $("img").attr("src", "./peachimg.jpeg");
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <img src="" alt="" />
+      <div>
+        <button onclick="apple()">사과</button>
+        <button onclick="banana()">바나나</button>
+        <button onclick="grape()">포도</button>
+        <button onclick="peach()">복숭아</button>
+      </div>
+    </div>
+  </body>
+</html>

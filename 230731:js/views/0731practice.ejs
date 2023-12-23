@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        width: 500px;
+        height: 60px;
+        border: 2px solid #000;
+        position: relative;
+        display: flex;
+        top: 10px;
+
+        align-items: center; /* 수직 가운데 정렬 */
+      }
+
+      p {
+        position: absolute;
+        top: -20px; /* 사각형 위쪽으로 20px 만큼 이동 (글씨의 높이에 따라 조절 가능) */
+        left: 10px; /* 사각형 왼쪽으로 10px 만큼 이동 */
+        background-color: #fff;
+        padding: 2px 6px;
+      }
+
+      select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding: 2px 30px 2px 10px;
+        background: url("arrow-down-icon.png") no-repeat right center;
+        background-size: 20px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><%= title%></h1>
+    <h3>post로 정보받기</h3>
+    <form action="/postForm" method="get">
+      <label for="name">이름 <input type="text" name="name" required /></label>
+
+      <br />
+
+      <div class="box">
+        <p>성별</p>
+        <input type="radio" name="gender" value="남자" />남자
+        <input type="radio" name="gender" value="여자" />여자
+      </div>
+
+      <br />
+      <div class="box">
+        <p>생년월일</p>
+        <!-- <input type="select" />년 <input type="select" />월
+        <input type="select" />일 -->
+
+        <select id="year" name="year">
+          <option>2010</option>
+          <option>2011</option>
+          <option>2012</option>
+        </select>
+        <label for="year">년</label>
+
+        <select id="month" name="month">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <label for="month">월</label>
+
+        <select id="day" name="day">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <label for="day">일</label>
+      </div>
+      <br />
+
+      <div class="box">
+        <p>관심사</p>
+        <input type="checkbox" name="hobby" value="여행" />여행
+        <input type="checkbox" name="hobby" value="패션" />패션
+        <input type="checkbox" name="hobby" value="음식" />음식
+      </div>
+
+      <br />
+      <div class="box">
+        <p>선택</p>
+        <div>
+          <div>
+            <label for="favColor">좋아하는 색상</label>
+            <input
+              type="color"
+              id="favColor"
+              name="favColor"
+              value="<%= favColor %>"
+            />
+            <br />
+          </div>
+        </div>
+
+        <div>
+          <label for="favNumber">좋아하는 숫자:</label>
+          <input
+            type="number"
+            id="favNumber"
+            name="favNumber"
+            value="<%= favNumber %>"
+          />
+        </div>
+      </div>
+
+      <br />
+      <button type="submit">회원가입</button>
+    </form>
+  </body>
+</html>

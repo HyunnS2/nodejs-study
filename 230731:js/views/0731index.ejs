@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%= title%></h1>
+
+    <!-- required 넣으면 필수값이라는 뜻 -->
+    <!-- readonly 는 입력 불가 / disabled는 선택 조차 불가 -->
+    <!-- pattern 넣으면 정규식 넣는 것 -->
+    <h4>GET 요청</h4>
+    <form action="/getForm" method="get">
+      <input type="text" placeholder="id" name="id" required />
+      <input type="password" placeholder="pw" name="pw" required />
+      <button type="submit">제출</button>
+    </form>
+
+    <hr />
+    <h4>POST 요청</h4>
+    <form action="/postForm" method="post">
+      <input type="text" placeholder="id" name="id" readonly />
+      <input
+        type="password"
+        placeholder="pw"
+        name="pw"
+        pattern="^([a-z0-9]){8,12}"
+      />
+      <input type="email" placeholder="email" required /><br />
+      <input type="radio" /><br />
+      <input type="checkbox" /><br />
+      <input type="tel:010" /><br />
+      <input type="number" /><br />
+      <input type="date" /><br />
+      <input type="time" /><br />
+      <button type="submit">제출</button>
+    </form>
+  </body>
+</html>

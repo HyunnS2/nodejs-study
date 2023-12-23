@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1. 배열 구조 분해 할당
+      const lists = ["apple", "grape"];
+      // 기존 방식
+      console.log(lists[0], lists[1]);
+      // 구조 분해 방식 -> item1 과 같은 변수명은 자유롭게 설정
+      [item1, item2] = lists;
+      console.log(item1, item2);
+
+      // 교안처럼 바로 할당해도 됨
+      //[item1, item2, item3 = "peach"] = lists;
+      //console.log(item1, item2);
+
+      // const는 원래 수정 불가하지 않나? -> 배열 자체를 바꾸는 건 안되지만, 배열의 원소를 바꾸는건 가능함 .
+      item1 = "peach";
+      console.log(item1);
+
+      // 교환
+      let x = 1,
+        y = 3;
+      [x, y] = [y, x];
+      console.log(x, y);
+
+      console.log("--------<2>--------");
+
+      // 2. 객체 구조 분해
+
+      // 객체란?
+      // 객체는 항상 중괄호 형태로 넣고, key 와 value로 나눔
+      const Person = {
+        // key: value
+        name: "Martin",
+        age: 19,
+        gender: "M",
+        friends: ["Alex", "Kevin"],
+        hello: function () {
+          console.log("hello");
+        },
+        // 특수문자는 문자열로 변수선언 해야함 -> 접근할 땐 배열식 접근
+        "j-1": "America",
+      };
+
+      console.log(Person.name);
+      Person.age = 29;
+      console.log(Person.age);
+      console.log(Person.friends[0]);
+      Person.hello();
+      console.log(Person["name"]);
+      console.log(Person["j-1"]);
+      //   객체 안에 추가적 삽입
+      Person.city = "Seoul";
+      console.log(Person);
+
+      // 예시 - 객체 안에 객체 넣기
+      const Persons = [{}, {}, {}];
+
+      console.log("-----------------");
+
+      // 객체 구조 분해 할당
+      const { name, city, gender, key1 = "Hi" } = Person;
+      console.log(name, city, gender, key1);
+    </script>
+  </body>
+</html>

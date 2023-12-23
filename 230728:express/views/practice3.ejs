@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <li>
+      <% for (let a = data; a < 10; a++) { %> <% for (let b = 1; b < 10; b++) {
+      %> <% console.log(`${a} * ${b} = ${a*b}`) %> <% } %> <% } %>
+    </li>
+
+    <!-- <script>
+      for (let a = 2; a < 10; a++) {
+        for (let b = 1; b < 10; b++) {
+          if (b == 1) {
+            console.log("-----" + a + "단------");
+          }
+          console.log(a + "x" + b + "=", a * b);
+        }
+      }
+    </script> -->
+    <!-- 
+    <script>
+      for (let n = 0; n < 10; n++) {
+        for (let a = data[n]; a < 10; a++) {
+          for (let b = 1; b < 10; b++) {
+            if (b == 1) {
+              console.log("-----" + a + "단------");
+            }
+            console.log(a + "x" + b + "=", a * b);
+          }
+        }
+      }
+    </script> -->
+  </body>
+</html>
