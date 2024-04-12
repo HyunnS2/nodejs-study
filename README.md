@@ -2,18 +2,18 @@
 
 node.js 공부 기록 
 
-# 230727 : 기초 시작
+### 230727 : 기초 시작
 - 모듈 연습
 - 분해 할당 연습
 
-# 230728 : express
+### 230728 : express
 - express와 ejs 이용하기
 
-# 230731 : form
+### 230731 : form
 - form 전송 연습
 - 유효성 검사
 
-# 230801 : dynamic form
+### 230801 : dynamic form
 - 동적 form 전송 연습
 - ajax , axios , fetch 이론 공부 후 연습
 - get, post 이용한 axios 연습 
